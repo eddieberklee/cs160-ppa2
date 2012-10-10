@@ -1,0 +1,174 @@
+/* sass by eddie */
+
+@import "css3_mixins"
+@import "vspacer-num"
+
+.clear
+  clear: both
+
+// SECTION colors
+$lgray: #efeff5
+////////////////////////////////////////////////
+
+$container-width: 900px
+$container-padding: 40px
+
+#container
+  width: $container-width
+  margin: 0 auto
+  padding: $container-padding
+  outline: 1px solid gray
+
+#header
+  text-align: center
+
+$name-padding: 7px
+span#name
+  float: left
+  padding: $name-padding
+  padding-right: 2px
+  &:hover
+    cursor: pointer
+    outline: 1px solid $lgray
+span#s-portfolio
+  padding-top: $name-padding
+  float: left
+
+div#text
+  margin: 0 auto
+  @include css3-text-shadow(1px,2px,0px,rgba(0,0,0,0.1))
+
+h1
+  font-size: 3.5em
+
+body
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif
+
+#description
+  width: 650px
+  margin: 0 auto
+  text-align: center
+  font-size: 1.8em
+  line-height: 1.6em
+
+  // popup design stylings
+  padding: 24px
+  background-color: $lgray
+  @include css3-border-radius(7px)
+  @include css3-box-shadow(1px,1px,0px,rgba(0,0,0,0.2))
+
+// SECTION prism
+#prism
+  width: $container-width + 2 * $container-padding
+  background-color: $lgray
+  min-height: 400px
+  position: relative
+  left: -$container-padding
+  padding-top: 50px
+// DEBUG #prism *
+// DEBUG outline: 1px solid #aaa
+#cannon,#w-source,#red,#w-r-filter,
+#yellow,#w-r-y-filter,#blue,#w-r-y-b-filter,
+.list-background,.triangle,#prism-diffuser
+  float: left
+  position: relative
+  // top: 20px
+#cannon
+  z-index: 2
+#w-source
+  z-index: 3
+#red
+  z-index: 4
+#w-r-filter
+  z-index: 5
+#yellow
+  z-index: 6
+#w-r-y-filter
+  z-index: 7
+#blue
+  z-index: 8
+#w-r-y-b-filter
+  z-index: 9
+.triangle,.triangle-r
+  z-index: 10
+#prism-diffuser
+  z-index: 11
+
+$light-opacity: 0.8
+
+#cannon, #red, #yellow, #blue
+  margin-top: 15px
+#red, #yellow, #blue
+  margin-top: 1px
+#w-source,#w-r-filter,#w-r-y-filter,#w-r-y-b-filter
+  width: 80px
+  height: 20px
+  margin-top: 50px
+  opacity: $light-opacity
+#cannon
+#w-source
+  background-color: #fff
+  margin-left: -8px
+#red
+  margin-left: -41px
+#w-r-filter
+  background-color: #fff
+  margin-left: -47px
+#yellow
+  margin-left: -43px
+#w-r-y-filter
+  background-color: #fff
+  margin-left: -47px
+#blue
+  margin-left: -43px
+#w-r-y-b-filter
+  width: 110px
+  background-color: #fff
+  margin-left: -47px
+
+$triangle-width: 40px
+.triangle
+  width: 30px
+  height: 100px
+  overflow: hidden
+  z-index: 12
+  top: -40px
+  left: 30px
+$triangle-actual-margin-top: 9px
+$triangle-actual-margin-left: 15px
+$degree: 20deg
+.triangle-actual
+  width: $triangle-width
+  height: 100%
+  background-color: #fff
+  opacity: $light-opacity
+  @include css3-rotation($degree)
+  margin-top: $triangle-actual-margin-top
+  margin-left: $triangle-actual-margin-left
+.triangle-r
+  @extend .triangle
+  top: 60px
+  left: 0px
+.triangle-actual-r
+  @extend .triangle-actual
+  @include css3-rotation(-($degree))
+  margin-top: -($triangle-actual-margin-top)
+  margin-left: $triangle-actual-margin-left
+.list-background
+  width: 370px
+  min-height: 173px
+  opacity: $light-opacity
+  margin-top: -170px
+  background-color: #fff
+  top: 25px
+  left: 123px
+#prism-diffuser
+  left: -110px
+
+
+
+
+
+
+
+

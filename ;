@@ -1,0 +1,133 @@
+/* sass by eddie */
+
+@import "css3_mixins"
+@import "vspacer-num"
+
+.clear
+  clear: both
+
+// SECTION colors
+$lgray: #efeff5
+////////////////////////////////////////////////
+
+$container-width: 900px
+$container-padding: 40px
+
+#container
+  width: $container-width
+  margin: 0 auto
+  padding: $container-padding
+  outline: 1px solid gray
+
+#header
+  text-align: center
+
+$name-padding: 7px
+span#name
+  float: left
+  padding: $name-padding
+  padding-right: 2px
+  &:hover
+    cursor: pointer
+    outline: 1px solid $lgray
+span#s-portfolio
+  padding-top: $name-padding
+  float: left
+
+div#text
+  margin: 0 auto
+  @include css3-text-shadow(1px,2px,0px,rgba(0,0,0,0.1))
+
+h1
+  font-size: 3.5em
+
+body
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif
+
+#description
+  width: 650px
+  margin: 0 auto
+  text-align: center
+  font-size: 1.8em
+  line-height: 1.6em
+
+  // popup design stylings
+  padding: 24px
+  background-color: $lgray
+  @include css3-border-radius(7px)
+  @include css3-box-shadow(1px,1px,0px,rgba(0,0,0,0.2))
+
+// SECTION prism
+#prism
+  width: $container-width + 2 * $container-padding
+  background-color: $lgray
+  min-height: 400px
+  position: relative
+  left: -$container-padding
+  padding-top: 40px
+// DEBUG #prism *
+// DEBUG outline: 1px solid #aaa
+#cannon,#w-source,#red,#w-r-filter,
+#yellow,#w-r-y-filter,#blue,#w-r-y-b-filter
+  position: relative
+  // top: 20px
+#cannon
+  z-index: 2
+#w-source
+  z-index: 3
+#red
+  z-index: 4
+#w-r-filter
+  z-index: 5
+#yellow
+  z-index: 6
+#w-r-y-filter
+  z-index: 7
+#blue
+  z-index: 8
+#w-r-y-b-filter
+  z-index: 9
+
+#cannon, #red, #yellow, #blue
+  float: left
+  margin-top: 15px
+#red, #yellow, #blue
+  margin-top: 1px
+#w-source,#w-r-filter,#w-r-y-filter,#w-r-y-b-filter
+  width: 80px
+  height: 20px
+  float: left
+  margin-top: 50px
+  opacity: 0.8
+#cannon
+  margin-left: -14px
+#w-source
+  background-color: #fff
+  margin-left: -8px
+#red
+  margin-left: -41px
+#w-r-filter
+  background-color: #fff
+  margin-left: -47px
+#yellow
+  margin-left: -43px
+#w-r-y-filter
+  background-color: #fff
+  margin-left: -47px
+#blue
+  margin-left: -43px
+#w-r-y-b-filter
+  background-color: #fff
+  margin-left: -47px
+.triangle
+  outline: 1px solid black
+  width: 40px
+  height: 100px
+  float: left
+  overflow: hidden
+.triangle-actual
+  width: 100%
+  height: 100%
+  background-color: red
+  @include css3-rotation(15deg)
+

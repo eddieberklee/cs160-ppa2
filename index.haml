@@ -1,0 +1,44 @@
+!!! 5
+%html
+  %head
+    %title variable_as_name
+    %link{:rel=>"stylesheet", :href=>"reset.css"}
+    %link{:rel=>"stylesheet", :href=>"bootstrap/css/bootstrap.min.css"}
+    %link{:rel=>"stylesheet", :href=>"style.css"}
+  %body
+    #container
+      #header
+        %h1
+          #text
+            %span#name
+            %span#s-portfolio
+              's Portfolio
+            .clear
+          .clear
+      .vspacer-50
+      #description
+        Description: The "white light" represents the source of all my works. Filter it to see them segmented per topic.
+      .vspacer-60
+      #body_content
+        #prism
+          %img{:src=>"cannon.png", :id=>"cannon"}
+          #w-source
+          %img{:src=>"red_gem.png", :id=>"red"}
+          #w-r-filter
+          %img{:src=>"yellow_gem.png", :id=>"yellow"}
+          #w-r-y-filter
+          %img{:src=>"blue_gem.png", :id=>"blue"}
+          #w-r-y-b-filter
+          .triangle
+            .triangle-actual
+          .triangle-r
+            .triangle-actual-r
+          %img{:src=>"prism.png", :id=>"prism-diffuser"}
+          .list-background
+          .clear
+      .vspacer-60
+      %div#footer
+        Footer
+      %script{:src=>"jquery-1.8.2.min.js"}
+      %script{:src=>"bootstrap/js/bootstrap.min.js"}
+      %script{:src=>"code.js"}
