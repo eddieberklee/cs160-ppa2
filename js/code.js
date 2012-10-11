@@ -93,14 +93,35 @@ $(function() {
     color_bars();
   }
 
+  function ripple(color) {
+    selector = '#' + color + '-ring img';
+    $(selector).css('opacity','100');
+    $(selector).animate({
+      width: 400,
+      left: 0,
+      top: 0,
+      opacity: 0,
+    },500,'linear',function() {});
+    // reset
+    $(selector).css('opacity','100');
+    $(selector).animate({
+      width: 60,
+      top: 170,
+      left: 170,
+    },1,'linear');
+  }
+
   $("#red").click(function() {
     moveCrystal(this);
+    ripple('red');
   });
   $("#yellow").click(function() {
     moveCrystal(this);
+    ripple('yellow');
   });
   $("#blue").click(function() {
     moveCrystal(this);
+    ripple('blue');
   });
 
   // develop: enter in a test name
@@ -110,4 +131,7 @@ $(function() {
   // debug ? console.log(name.length) : 1;
   
   color_bars();
+  moveCrystal("#red");
+  moveCrystal("#yellow");
+  moveCrystal("#blue");
 });
