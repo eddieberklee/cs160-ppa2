@@ -81,7 +81,7 @@ $(function() {
     }
   }
 
-  var top_i = '70px';
+  var top_i = '90px';
 
   function moveCrystal(crystal) {
     $(crystal).toggleClass('on');
@@ -89,7 +89,7 @@ $(function() {
     top_increment = ($(crystal).hasClass('on')) ? 0 : top_i;
     $(crystal).animate({
       top: top_increment,
-    },50,function() {});
+    },1,function() {});
     color_bars();
   }
 

@@ -196,6 +196,18 @@ body {
   margin-top: 50px;
   opacity: 0.8; }
 
+#w-r {
+  height: 19px;
+  margin-top: 51px; }
+
+#w-r-y {
+  height: 18px;
+  margin-top: 52px; }
+
+#w-r-y-b {
+  height: 17px;
+  margin-top: 53px; }
+
 .filter {
   background-color: white; }
 
@@ -221,6 +233,13 @@ body {
 #w-r-y-b {
   width: 110px;
   margin-left: -47px; }
+
+#w-source {
+  -o-box-shadow: 0px 0px 6px white;
+  -ms-box-shadow: 0px 0px 6px white;
+  -moz-box-shadow: 0px 0px 6px white;
+  -webkit-box-shadow: 0px 0px 6px white;
+  box-shadow: 0px 0px 6px white; }
 
 .red-on {
   background-color: #de2e2b;
