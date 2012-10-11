@@ -67,11 +67,12 @@ body
   padding-top: 50px
 // DEBUG #prism *
 // DEBUG outline: 1px solid #aaa
-#cannon,#w-source,#red,#w-r-filter,
-#yellow,#w-r-y-filter,#blue,#w-r-y-b-filter,
+#cannon,#w-source,#red,#w-r,
+#yellow,#w-r-y,#blue,#w-r-y-b,
 .list-background,.triangle,#prism-diffuser
   float: left
   position: relative
+  @include css3-transition(all,0.3s)
   // top: 20px
 #cannon
   z-index: 2
@@ -79,20 +80,28 @@ body
   z-index: 3
 #red
   z-index: 4
-#w-r-filter
+#w-r
   z-index: 5
 #yellow
   z-index: 6
-#w-r-y-filter
+#w-r-y
   z-index: 7
 #blue
   z-index: 8
-#w-r-y-b-filter
+#w-r-y-b
   z-index: 9
 .triangle,.triangle-r
   z-index: 10
 #prism-diffuser
   z-index: 11
+
+$red-light: lighten(#8D1816, 20%)
+$yellow-light: #EFED66
+$blue-light: #83C9D5
+$brown-light: darken(saturate(#6B5344, 15%), 10%)
+$orange-light: lighten(saturate(#D24605, 10%), 10%)
+$green-light: darken(saturate(#A9B64D, 25%), 10%)
+$purple-light: #480048
 
 $light-opacity: 0.8
 
@@ -100,31 +109,47 @@ $light-opacity: 0.8
   margin-top: 15px
 #red, #yellow, #blue
   margin-top: 1px
-#w-source,#w-r-filter,#w-r-y-filter,#w-r-y-b-filter
+#w-source,#w-r,#w-r-y,#w-r-y-b
   width: 80px
   height: 20px
   margin-top: 50px
   opacity: $light-opacity
-#cannon
+.filter
+  background-color: #fff
 #w-source
   background-color: #fff
   margin-left: -8px
 #red
   margin-left: -41px
-#w-r-filter
-  background-color: #fff
+#w-r
   margin-left: -47px
 #yellow
   margin-left: -43px
-#w-r-y-filter
-  background-color: #fff
+#w-r-y
   margin-left: -47px
 #blue
   margin-left: -43px
-#w-r-y-b-filter
+#w-r-y-b
   width: 110px
-  background-color: #fff
   margin-left: -47px
+
+// for adding classes with jquery
+.red-on
+  background-color: $red-light
+.yellow-on
+  background-color: $yellow-light
+.blue-on
+  background-color: $blue-light
+.brown-on
+  background-color: $brown-light
+.orange-on
+  background-color: $orange-light
+.green-on
+  background-color: $green-light
+.purple-on
+  background-color: $purple-light
+.white-on
+  background-color: #fff
 
 $triangle-width: 40px
 .triangle
