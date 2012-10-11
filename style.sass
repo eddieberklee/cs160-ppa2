@@ -98,9 +98,9 @@ body
 $red-light: lighten(#8D1816, 20%)
 $yellow-light: #EFED66
 $blue-light: #83C9D5
-$brown-light: darken(saturate(#6B5344, 15%), 10%)
+$brown-light: darken(saturate(#6B5344, 80%), 20%)
 $orange-light: lighten(saturate(#D24605, 10%), 10%)
-$green-light: darken(saturate(#A9B64D, 25%), 10%)
+$green-light: darken(saturate(#A9B64D, 90%), 20%)
 $purple-light: #480048
 
 $light-opacity: 0.8
@@ -109,8 +109,9 @@ $light-opacity: 0.8
   margin-top: 15px
 #red, #yellow, #blue
   margin-top: 1px
+  cursor: pointer
 #w-source,#w-r,#w-r-y,#w-r-y-b
-  width: 80px
+  width: 112px
   height: 20px
   margin-top: 50px
   opacity: $light-opacity
@@ -120,15 +121,15 @@ $light-opacity: 0.8
   background-color: #fff
   margin-left: -8px
 #red
-  margin-left: -41px
+  margin-left: -74px
 #w-r
   margin-left: -47px
 #yellow
-  margin-left: -43px
+  margin-left: -73px
 #w-r-y
   margin-left: -47px
 #blue
-  margin-left: -43px
+  margin-left: -73px
 #w-r-y-b
   width: 110px
   margin-left: -47px
@@ -136,20 +137,28 @@ $light-opacity: 0.8
 // for adding classes with jquery
 .red-on
   background-color: $red-light
+  @include css3-box-shadow(0px,0px,6px,$red-light)
 .yellow-on
   background-color: $yellow-light
+  @include css3-box-shadow(0px,0px,6px,$yellow-light)
 .blue-on
   background-color: $blue-light
+  @include css3-box-shadow(0px,0px,6px,$blue-light)
 .brown-on
   background-color: $brown-light
+  @include css3-box-shadow(0px,0px,6px,$brown-light)
 .orange-on
   background-color: $orange-light
+  @include css3-box-shadow(0px,0px,6px,$orange-light)
 .green-on
   background-color: $green-light
+  @include css3-box-shadow(0px,0px,6px,$green-light)
 .purple-on
   background-color: $purple-light
+  @include css3-box-shadow(0px,0px,6px,$purple-light)
 .white-on
   background-color: #fff
+  @include css3-box-shadow(0px,0px,6px,#fff)
 
 $triangle-width: 40px
 .triangle

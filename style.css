@@ -187,10 +187,11 @@ body {
   margin-top: 15px; }
 
 #red, #yellow, #blue {
-  margin-top: 1px; }
+  margin-top: 1px;
+  cursor: pointer; }
 
 #w-source, #w-r, #w-r-y, #w-r-y-b {
-  width: 80px;
+  width: 112px;
   height: 20px;
   margin-top: 50px;
   opacity: 0.8; }
@@ -203,47 +204,87 @@ body {
   margin-left: -8px; }
 
 #red {
-  margin-left: -41px; }
+  margin-left: -74px; }
 
 #w-r {
   margin-left: -47px; }
 
 #yellow {
-  margin-left: -43px; }
+  margin-left: -73px; }
 
 #w-r-y {
   margin-left: -47px; }
 
 #blue {
-  margin-left: -43px; }
+  margin-left: -73px; }
 
 #w-r-y-b {
   width: 110px;
   margin-left: -47px; }
 
 .red-on {
-  background-color: #de2e2b; }
+  background-color: #de2e2b;
+  -o-box-shadow: 0px 0px 6px #de2e2b;
+  -ms-box-shadow: 0px 0px 6px #de2e2b;
+  -moz-box-shadow: 0px 0px 6px #de2e2b;
+  -webkit-box-shadow: 0px 0px 6px #de2e2b;
+  box-shadow: 0px 0px 6px #de2e2b; }
 
 .yellow-on {
-  background-color: #efed66; }
+  background-color: #efed66;
+  -o-box-shadow: 0px 0px 6px #efed66;
+  -ms-box-shadow: 0px 0px 6px #efed66;
+  -moz-box-shadow: 0px 0px 6px #efed66;
+  -webkit-box-shadow: 0px 0px 6px #efed66;
+  box-shadow: 0px 0px 6px #efed66; }
 
 .blue-on {
-  background-color: #83c9d5; }
+  background-color: #83c9d5;
+  -o-box-shadow: 0px 0px 6px #83c9d5;
+  -ms-box-shadow: 0px 0px 6px #83c9d5;
+  -moz-box-shadow: 0px 0px 6px #83c9d5;
+  -webkit-box-shadow: 0px 0px 6px #83c9d5;
+  box-shadow: 0px 0px 6px #83c9d5; }
 
 .brown-on {
-  background-color: #553927; }
+  background-color: #491c00;
+  -o-box-shadow: 0px 0px 6px #491c00;
+  -ms-box-shadow: 0px 0px 6px #491c00;
+  -moz-box-shadow: 0px 0px 6px #491c00;
+  -webkit-box-shadow: 0px 0px 6px #491c00;
+  box-shadow: 0px 0px 6px #491c00; }
 
 .orange-on {
-  background-color: #ff580b; }
+  background-color: #ff580b;
+  -o-box-shadow: 0px 0px 6px #ff580b;
+  -ms-box-shadow: 0px 0px 6px #ff580b;
+  -moz-box-shadow: 0px 0px 6px #ff580b;
+  -webkit-box-shadow: 0px 0px 6px #ff580b;
+  box-shadow: 0px 0px 6px #ff580b; }
 
 .green-on {
-  background-color: #9cae22; }
+  background-color: #8a9d00;
+  -o-box-shadow: 0px 0px 6px #8a9d00;
+  -ms-box-shadow: 0px 0px 6px #8a9d00;
+  -moz-box-shadow: 0px 0px 6px #8a9d00;
+  -webkit-box-shadow: 0px 0px 6px #8a9d00;
+  box-shadow: 0px 0px 6px #8a9d00; }
 
 .purple-on {
-  background-color: #480048; }
+  background-color: #480048;
+  -o-box-shadow: 0px 0px 6px #480048;
+  -ms-box-shadow: 0px 0px 6px #480048;
+  -moz-box-shadow: 0px 0px 6px #480048;
+  -webkit-box-shadow: 0px 0px 6px #480048;
+  box-shadow: 0px 0px 6px #480048; }
 
 .white-on {
-  background-color: white; }
+  background-color: white;
+  -o-box-shadow: 0px 0px 6px white;
+  -ms-box-shadow: 0px 0px 6px white;
+  -moz-box-shadow: 0px 0px 6px white;
+  -webkit-box-shadow: 0px 0px 6px white;
+  box-shadow: 0px 0px 6px white; }
 
 .triangle, .triangle-r {
   width: 30px;
