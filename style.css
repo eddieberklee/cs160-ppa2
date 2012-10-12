@@ -146,7 +146,7 @@ body {
 
 #cannon, #w-source, #red, #w-r,
 #yellow, #w-r-y, #blue, #w-r-y-b,
-.list-background, .triangle, .triangle-r, #prism-diffuser {
+#list-background, .triangle, .triangle-r, #prism-diffuser {
   float: left;
   position: relative;
   -o-transition: all 0.3s;
@@ -195,7 +195,13 @@ body {
   width: 400px;
   height: 400px;
   position: absolute;
-  z-index: 1; }
+  z-index: 1;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 #red-ring {
   left: -70px; }
@@ -372,14 +378,28 @@ body {
   margin-top: -9px;
   margin-left: 15px; }
 
-.list-background {
+#list-background {
   width: 370px;
   min-height: 173px;
   opacity: 0.8;
   margin-top: -170px;
   background-color: white;
   top: 25px;
-  left: 123px; }
+  left: 123px;
+  padding: 10px;
+  padding-bottom: 0; }
+
+#list-background p {
+  padding: 5px;
+  cursor: pointer;
+  opacity: 0.9; }
+  #list-background p:hover {
+    -o-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.45);
+    -ms-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.45);
+    -webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.45);
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.45);
+    opacity: 1; }
 
 #prism-diffuser {
   left: -110px; }

@@ -70,7 +70,7 @@ body
 // DEBUG outline: 1px solid #aaa
 #cannon,#w-source,#red,#w-r,
 #yellow,#w-r-y,#blue,#w-r-y-b,
-.list-background,.triangle,#prism-diffuser
+#list-background,.triangle,#prism-diffuser
   float: left
   position: relative
   @include css3-transition(all,0.3s)
@@ -112,6 +112,7 @@ $light-opacity: 0.8
   height: 400px
   position: absolute
   z-index: 1
+  @include css3-user-select()
 #red-ring
   left: -70px
 #yellow-ring
@@ -219,7 +220,7 @@ $degree: 20deg
   @include css3-rotation(-($degree))
   margin-top: -($triangle-actual-margin-top)
   margin-left: $triangle-actual-margin-left
-.list-background
+#list-background
   width: 370px
   min-height: 173px
   opacity: $light-opacity
@@ -227,6 +228,15 @@ $degree: 20deg
   background-color: #fff
   top: 25px
   left: 123px
+  padding: 10px
+  padding-bottom: 0
+#list-background p
+  padding: 5px
+  cursor: pointer
+  opacity: 0.9
+  &:hover
+    @include css3-box-shadow(1px,1px,6px,rgba(0,0,0,0.45))
+    opacity: 1
 #prism-diffuser
   left: -110px
 
