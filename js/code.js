@@ -8,13 +8,7 @@ $(function() {
   }
 
   var debug = 1;
-  var name = "Leandro Daivincin";
-
-  function remove_color_classes(selector) {
-    $(selector).removeClass('red-color');
-  }
-  // TODO add functions for easy application of a single color on following filters.
-  // TODO refactor
+  var name = "Eddie";
 
   function color_bars() {
     $red = $("#red");
@@ -32,10 +26,22 @@ $(function() {
         if ($blue.hasClass('on')) {
           removeClasses($blue_light);
           $blue_light.addClass('brown-on');
+          removeClasses($("#list-background"));
+          $("#list-background").addClass('brown-on');
+          removeClasses($("#triangle-actual-r"));
+          $("#triangle-actual-r").addClass('brown-on');
+          removeClasses($("#triangle-actual"));
+          $("#triangle-actual").addClass('brown-on');
         }
         else if (!$blue.hasClass('on')) {
           removeClasses($blue_light);
           $blue_light.addClass('orange-on');
+          removeClasses($("#list-background"));
+          $("#list-background").addClass('orange-on');
+          removeClasses($("#triangle-actual-r"));
+          $("#triangle-actual-r").addClass('orange-on');
+          removeClasses($("#triangle-actual"));
+          $("#triangle-actual").addClass('orange-on');
         }
       }
       else if (!$yellow.hasClass('on')) {
@@ -44,10 +50,22 @@ $(function() {
         if ($blue.hasClass('on')) {
           removeClasses($blue_light);
           $blue_light.addClass('purple-on');
+          removeClasses($("#list-background"));
+          $("#list-background").addClass('purple-on');
+          removeClasses($("#triangle-actual-r"));
+          $("#triangle-actual-r").addClass('purple-on');
+          removeClasses($("#triangle-actual"));
+          $("#triangle-actual").addClass('purple-on');
         }
         else if (!$blue.hasClass('on')) {
           removeClasses($blue_light);
           $blue_light.addClass('red-on');
+          removeClasses($("#list-background"));
+          $("#list-background").addClass('red-on');
+          removeClasses($("#triangle-actual-r"));
+          $("#triangle-actual-r").addClass('red-on');
+          removeClasses($("#triangle-actual"));
+          $("#triangle-actual").addClass('red-on');
         }
       }
     }
@@ -60,10 +78,22 @@ $(function() {
         if ($blue.hasClass('on')) {
           removeClasses($blue_light);
           $blue_light.addClass('green-on');
+          removeClasses($("#list-background"));
+          $("#list-background").addClass('green-on');
+          removeClasses($("#triangle-actual-r"));
+          $("#triangle-actual-r").addClass('green-on');
+          removeClasses($("#triangle-actual"));
+          $("#triangle-actual").addClass('green-on');
         }
         else if (!$blue.hasClass('on')) {
           removeClasses($blue_light);
           $blue_light.addClass('yellow-on');
+          removeClasses($("#list-background"));
+          $("#list-background").addClass('yellow-on');
+          removeClasses($("#triangle-actual-r"));
+          $("#triangle-actual-r").addClass('yellow-on');
+          removeClasses($("#triangle-actual"));
+          $("#triangle-actual").addClass('yellow-on');
         }
       }
       else if (!$yellow.hasClass('on')) {
@@ -72,10 +102,22 @@ $(function() {
         if ($blue.hasClass('on')) {
           removeClasses($blue_light);
           $blue_light.addClass('blue-on');
+          removeClasses($("#list-background"));
+          $("#list-background").addClass('blue-on');
+          removeClasses($("#triangle-actual-r"));
+          $("#triangle-actual-r").addClass('blue-on');
+          removeClasses($("#triangle-actual"));
+          $("#triangle-actual").addClass('blue-on');
         }
         else if (!$blue.hasClass('on')) {
           removeClasses($blue_light);
           $blue_light.addClass('white-on');
+          removeClasses($("#list-background"));
+          $("#list-background").addClass('white-on');
+          removeClasses($("#triangle-actual-r"));
+          $("#triangle-actual-r").addClass('white-on');
+          removeClasses($("#triangle-actual"));
+          $("#triangle-actual").addClass('white-on');
         }
       }
     }

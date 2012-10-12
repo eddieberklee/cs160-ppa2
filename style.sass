@@ -70,7 +70,7 @@ body
 // DEBUG outline: 1px solid #aaa
 #cannon,#w-source,#red,#w-r,
 #yellow,#w-r-y,#blue,#w-r-y-b,
-#list-background,.triangle,#prism-diffuser
+#list-background,#triangle,#triangle-r,#prism-diffuser
   float: left
   position: relative
   @include css3-transition(all,0.3s)
@@ -92,7 +92,7 @@ body
   z-index: 8
 #w-r-y-b
   z-index: 9
-.triangle,.triangle-r
+#triangle,#triangle-r
   z-index: 10
 #prism-diffuser
   z-index: 11
@@ -193,30 +193,31 @@ $light-opacity: 0.8
   @include css3-box-shadow(0px,0px,6px,#fff)
 
 $triangle-width: 40px
-.triangle
+$triangle-actual-margin-top: 9px
+$triangle-actual-margin-left: 15px
+$degree: 20deg
+#triangle,#triangle-actual,#triangle-r,#triangle-actual-r
+  @include css3-transition(all,0.2s)
+#triangle
   width: 30px
   height: 100px
   overflow: hidden
   z-index: 12
   top: -40px
   left: 30px
-$triangle-actual-margin-top: 9px
-$triangle-actual-margin-left: 15px
-$degree: 20deg
-.triangle-actual
+#triangle-actual
   width: $triangle-width
   height: 100%
-  background-color: #fff
   opacity: $light-opacity
   @include css3-rotation($degree)
   margin-top: $triangle-actual-margin-top
   margin-left: $triangle-actual-margin-left
-.triangle-r
-  @extend .triangle
+#triangle-r
+  @extend #triangle
   top: 60px
   left: 0px
-.triangle-actual-r
-  @extend .triangle-actual
+#triangle-actual-r
+  @extend #triangle-actual
   @include css3-rotation(-($degree))
   margin-top: -($triangle-actual-margin-top)
   margin-left: $triangle-actual-margin-left
@@ -225,15 +226,15 @@ $degree: 20deg
   min-height: 173px
   opacity: $light-opacity
   margin-top: -170px
-  background-color: #fff
   top: 25px
   left: 123px
   padding: 10px
   padding-bottom: 0
 #list-background p
   padding: 5px
+  padding-left: 8px
   cursor: pointer
-  opacity: 0.9
+  opacity: 0.8
   &:hover
     @include css3-box-shadow(1px,1px,6px,rgba(0,0,0,0.45))
     opacity: 1
