@@ -13,6 +13,11 @@ indexes:
 - kind: Greeting
   ancestor: yes
   properties:
+  - name: author
+
+- kind: Greeting
+  ancestor: yes
+  properties:
   - name: date
 
 - kind: Greeting

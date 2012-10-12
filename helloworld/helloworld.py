@@ -37,7 +37,8 @@ class MainPage(webapp2.RequestHandler):
             if greeting.date:
                 self.response.out.write('%s <br>' % greeting.date)
 
-            
+            if greeting.author:
+              self.response.out.write('author: %s <br>' % greeting.author)
             if greeting.tags:
               self.response.out.write('tags: %s <br>' % greeting.tags)
             
@@ -50,14 +51,16 @@ class MainPage(webapp2.RequestHandler):
         self.response.out.write('<form action="%s" method="POST" enctype="multipart/form-data">' % upload_url)
         self.response.out.write("""<br>Upload File: <input type="file" name="file"><br> 
         <div>Tags: <input type="text" name="tags" ></div>
+        <div>Author: <input type="text" name="author" ></div>
         <div><input type="submit" name="submit" value="Submit"> </div></form>""")
         self.response.out.write('<a href="/serve3/">See files</a>')
+        
         
 class DocumentHandler(webapp2.RequestHandler):
     def get(self, resource):
         param = resource.split('.')
         tagKey = param[0]
-        sortOrderCandidate = ['date', 'filename']
+        sortOrderCandidate = ['date', 'filename', 'author']
         if len(param)>1:
           sortOrder = param[1]
           if sortOrder not in sortOrderCandidate:
@@ -83,6 +86,7 @@ class DocumentHandler(webapp2.RequestHandler):
                     #matching tag found!
                     dict = {}
                     dict['filename'] = greeting.filename
+                    dict['author'] = greeting.author
                     dict['tags'] = greeting.tags
                     #dict['date'] = greeting.date
                     dict['url'] = "/serve/%s" % greeting.file.key()
@@ -130,16 +134,14 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
     guestbook_name = self.request.get('guestbook_name')
     greeting = Greeting(parent=guestbook_key(guestbook_name))
 
-    if users.get_current_user():
-      greeting.author = users.get_current_user().nickname()
-
+    greeting.author = self.request.get('author')
     greeting.content = self.request.get('content')
     greeting.tags = self.request.get('tags')
     greeting.file = blob_info
     greeting.filename = blob_info.filename
-    greeting.put()
-    self.redirect('/?' + urllib.urlencode({'guestbook_name': guestbook_name}))
-    #self.redirect('/serve3/')
+    if greeting.file:
+      greeting.put()
+      self.redirect('/?' + urllib.urlencode({'guestbook_name': guestbook_name}))
 
 
 class ServeHandler(blobstore_handlers.BlobstoreDownloadHandler):
