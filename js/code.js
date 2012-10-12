@@ -156,6 +156,14 @@ $(function() {
   $("#red").click(function() {
     moveCrystal(this);
     ripple('red');
+    $.ajax({
+      url: "http://cs160ppa2lee.appspot.com/documents/r",
+      type: "GET",
+      context: document.body
+    }).done(function(dataReturned) { 
+      $(this).addClass("done");
+      alert(dataReturned);
+    });
   });
   $("#yellow").click(function() {
     moveCrystal(this);

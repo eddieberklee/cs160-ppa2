@@ -17,3 +17,18 @@ Sass will continually check the .sass file for changes and convert sass->css.
 
 For HAML, I wrote a similar Python script (that is 10000x less efficient that the sass --watch but whatever; quick fix).  
 To run: `python haml_watch.py` and then at the prompt type in `index.haml`
+
+Colors
+------
+
+### Red
+
+is for *Java*
+
+### Yellow
+
+is for *Python*
+
+### Red
+
+is for *Design*
