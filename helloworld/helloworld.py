@@ -58,7 +58,10 @@ class MainPage(webapp2.RequestHandler):
         
 class DocumentHandler(webapp2.RequestHandler):
     def get(self, resource):
-        param = resource.split('.')
+        if resource:
+          param = resource.split('.')
+        else:
+          param = ['','filename']
         tagKey = param[0]
         sortOrderCandidate = ['date', 'filename', 'author']
         if len(param)>1:
@@ -79,22 +82,31 @@ class DocumentHandler(webapp2.RequestHandler):
         rtn = {}
         n = 0
         for greeting in greetings:
-            if greeting.tags:
-              if resource:
-                for x in range(0, len(tagKey)):
-                  if tagKey[x] in str(greeting.tags):
-                    #matching tag found!
-                    dict = {}
-                    dict['filename'] = greeting.filename
-                    dict['author'] = greeting.author
-                    dict['tags'] = greeting.tags
-                    #dict['date'] = greeting.date
-                    dict['url'] = "/serve/%s" % greeting.file.key()
-                    rtn[n] = dict
-                    n = n+1
-                    break
+          if tagChecker(greeting.tags, tagKey):
+            #matching tag found!
+            dict = {}
+            dict['filename'] = greeting.filename
+            dict['author'] = greeting.author
+            dict['tags'] = greeting.tags
+            #dict['date'] = greeting.date
+            dict['url'] = "/serve/%s" % greeting.file.key()
+            rtn[n] = dict
+            n = n+1
+                
         rtn = json.dumps(rtn)
         self.response.out.write('%s' % rtn)
+        
+        
+def tagChecker(tags, tagkeys):
+  n = 0
+  for c in range(0,len(tagkeys)):
+    if tagkeys[c] in tags:
+      n= n+1
+  if n == len(tagkeys):
+    return True
+  else:
+    return False
+    
         
 def guestbook_key(guestbook_name=None):
   """Constructs a Datastore key for a Guestbook entity with guestbook_name."""
