@@ -157,7 +157,7 @@ $(function() {
     moveCrystal(this);
     ripple('red');
     $.ajax({
-      url: "/documents/r",
+      url: "http://cs160ppa2lee.appspot.com/documents/r",
       type: "GET",
       context: document.body
     }).done(function(dataReturned) { 
