@@ -4,22 +4,33 @@ import webapp2
 import cgi
 import datetime
 import json
-
+import jinja2
 
 from google.appengine.api import users
 from google.appengine.ext import blobstore
 from google.appengine.ext.webapp import blobstore_handlers
 from google.appengine.ext import db
 
+jinja_environment = jinja2.Environment(
+  loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
+
 class MainHandler(webapp2.RequestHandler):
   def get(self):
     upload_url = blobstore.create_upload_url('/upload')
-    self.response.out.write('<html><body>')
-    self.response.out.write('<form action="%s" method="POST" enctype="multipart/form-data">' % upload_url)
-    self.response.out.write("""Upload File: <input type="file" name="file"><br> <input type="submit"
-        name="submit" value="Submit"> </form>""")
-    self.response.out.write('<a href="/serve3/">See files</a>')
-    self.response.out.write('</body></html>')
+
+    template_values = {
+      'upload_url': upload_url,
+    }
+
+    template = jinja_environment.get_template('index.html')
+    self.response.out.write(template.render(template_values))
+
+    # self.response.out.write('<html><body>')
+    # self.response.out.write('<form action="%s" method="POST" enctype="multipart/form-data">' % upload_url)
+    # self.response.out.write("""Upload File: <input type="file" name="file"><br> <input type="submit"
+    #     name="submit" value="Submit"> </form>""")
+    # self.response.out.write('<a href="/serve3/">See files</a>')
+    # self.response.out.write('</body></html>')
     
 class MainPage(webapp2.RequestHandler):
     def get(self):
@@ -33,27 +44,37 @@ class MainPage(webapp2.RequestHandler):
                                 guestbook_key(guestbook_name))
 
 
-        for greeting in greetings:
-            if greeting.date:
-                self.response.out.write('%s <br>' % greeting.date)
+        # for greeting in greetings:
+        #     if greeting.date:
+        #         self.response.out.write('%s <br>' % greeting.date)
 
-            if greeting.author:
-              self.response.out.write('author: %s <br>' % greeting.author)
-            if greeting.tags:
-              self.response.out.write('tags: %s <br>' % greeting.tags)
-            
-            if greeting.file:
-              self.response.out.write('<a href="/serve/%s"' % greeting.file.key())
-              self.response.out.write('>Open: %s</a><br><br>' % greeting.file.filename)
-            #self.response.out.write("<br>hi<br>%s" % greeting.file)
+        #     if greeting.author:
+        #       self.response.out.write('author: %s <br>' % greeting.author)
+        #     if greeting.tags:
+        #       self.response.out.write('tags: %s <br>' % greeting.tags)
+        #     
+        #     if greeting.file:
+        #       self.response.out.write('<a href="/serve/%s"' % greeting.file.key())
+        #       self.response.out.write('>Open: %s</a><br><br>' % greeting.file.filename)
+        #     #self.response.out.write("<br>hi<br>%s" % greeting.file)
+
+        # upload_url = blobstore.create_upload_url('/upload')
+        # self.response.out.write('<form action="%s" method="POST" enctype="multipart/form-data">' % upload_url)
+        # self.response.out.write("""<br>Upload File: <input type="file" name="file"><br> 
+        # <div>Tags: <input type="text" name="tags" ></div>
+        # <div>Author: <input type="text" name="author" ></div>
+        # <div><input type="submit" name="submit" value="Submit"> </div></form>""")
+        # self.response.out.write('<a href="/serve3/">See files</a>')
+
 
         upload_url = blobstore.create_upload_url('/upload')
-        self.response.out.write('<form action="%s" method="POST" enctype="multipart/form-data">' % upload_url)
-        self.response.out.write("""<br>Upload File: <input type="file" name="file"><br> 
-        <div>Tags: <input type="text" name="tags" ></div>
-        <div>Author: <input type="text" name="author" ></div>
-        <div><input type="submit" name="submit" value="Submit"> </div></form>""")
-        self.response.out.write('<a href="/serve3/">See files</a>')
+
+        template_values = {
+          'upload_url': upload_url,
+        }
+
+        template = jinja_environment.get_template('index.html')
+        self.response.out.write(template.render(template_values))
         
         
 class DocumentHandler(webapp2.RequestHandler):
@@ -71,7 +92,6 @@ class DocumentHandler(webapp2.RequestHandler):
         else:
           sortOrder = 'filename'
           
-        self.response.out.write('<html><body>')
         guestbook_name=self.request.get('guestbook_name')
 
         greetings = db.GqlQuery("SELECT * "

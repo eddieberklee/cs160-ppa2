@@ -1,20 +1,97 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <title>variable_as_name</title>
+    <link href='css/reset.css' rel='stylesheet' />
+    <link href='bootstrap/css/bootstrap.min.css' rel='stylesheet' />
+    <link href='css/style.css' rel='stylesheet' />
+  </head>
   <body>
-    {% for greeting in greetings %}
-      {% if greeting.author %}
-        <b>{{ greeting.author }}</b> wrote:
-      {% else %}
-        An anonymous person wrote:
-      {% endif %}
-      <blockquote>{{ greeting.content|escape }}</blockquote>
-    {% endfor %}
-
-    <form action="/sign" method="post">
-      <div><textarea name="content" rows="3" cols="60"></textarea></div>
-      <div><input type="submit" value="Sign Guestbook"></div>
-    </form>
-
-    <a href="{{ url }}">{{ url_linktext }}</a>
-
+    <div id='container'>
+      <div id='header'>
+        <h1>
+          <div id='text'>
+            <span id='name'></span>
+            <span id='s-portfolio'>
+              's Portfolio
+            </span>
+            <div class='clear'></div>
+          </div>
+          <div class='clear'></div>
+        </h1>
+      </div>
+      <div class='vspacer-50'></div>
+      <div id='description'>
+        Description: The "white light" represents the source of all my works. Filter it to see them segmented per topic.
+      </div>
+      <div class='vspacer-60'></div>
+      <div id='body_content'>
+        <div id='red-ring'>
+          <img src='img/ring.png' width='60' />
+        </div>
+        <div id='yellow-ring'>
+          <img src='img/ring.png' width='60' />
+        </div>
+        <div id='blue-ring'>
+          <img src='img/ring.png' width='60' />
+        </div>
+        <div id='prism'>
+          <div id='w-source'></div>
+          <img class='on' id='red' src='img/red_gem.png' />
+          <div class='filter' id='w-r'></div>
+          <img class='on' id='yellow' src='img/yellow_gem.png' />
+          <div class='filter' id='w-r-y'></div>
+          <img class='on' id='blue' src='img/blue_gem.png' />
+          <div class='filter' id='w-r-y-b'></div>
+          <div id='triangle'>
+            <div id='triangle-actual'></div>
+          </div>
+          <div id='triangle-r'>
+            <div id='triangle-actual-r'></div>
+          </div>
+          <img id='prism-diffuser' src='img/prism.png' />
+          <div id='list-background'>
+            <p class='blue-on'>
+              <i class='icon-file'></i>
+              <span>
+                Relationship Between Internet QoS and Multicast Methodologies
+              </span>
+            </p>
+            <p class='red-on'>
+              <i class='icon-file'></i>
+              <span>
+                Methodology for the Development
+              </span>
+            </p>
+            <p class='purple-on'>
+              <i class='icon-file'></i>
+              <span>
+                Enabling the Internet and 8 Bit Architectures with Kisser
+              </span>
+            </p>
+            <p>
+              <i class='icon-file'></i>
+              <span>
+                Harnessing Hierarchical Databases Using Authenticated Configurations
+              </span>
+            </p>
+            <p>
+              <i class='icon-file'></i>
+              <span>
+                Deconstructing the Lookaside Buffer
+              </span>
+            </p>
+          </div>
+          <div class='clear'></div>
+        </div>
+      </div>
+      <div class='vspacer-60'></div>
+      <div id='footer'>
+        Footer
+      </div>
+      <script src='js/jquery-1.8.2.min.js'></script>
+      <script src='bootstrap/js/bootstrap.min.js'></script>
+      <script src='js/code.js'></script>
+    </div>
   </body>
 </html>
