@@ -1,0 +1,50 @@
+/* css3 sass by eddie */
+
+/* css3-border-radius */
+@mixin css3-border-radius($r)
+  -o-border-radius: $r
+  -ms-border-radius: $r
+  -moz-border-radius: $r
+  -webkit-border-radius: $r
+  border-radius: $r
+
+/* css3-box-shadow */
+@mixin css3-box-shadow($x,$y,$r,$color)
+  -o-box-shadow: $x $y $r $color
+  -ms-box-shadow: $x $y $r $color
+  -moz-box-shadow: $x $y $r $color
+  -webkit-box-shadow: $x $y $r $color
+  box-shadow: $x $y $r $color
+
+/* css3-text-shadow */
+@mixin css3-text-shadow($x,$y,$r,$color)
+  -o-text-shadow: $x $y $r $color
+  -ms-text-shadow: $x $y $r $color
+  -moz-text-shadow: $x $y $r $color
+  -webkit-text-shadow: $x $y $r $color
+  text-shadow: $x $y $r $color
+
+/* css3-transition */
+@mixin css3-transition($prop,$time)
+  -o-transition: $prop $time
+  -ms-transition: $prop $time
+  -moz-transition: $prop $time
+  -webkit-transition: $prop $time
+  transition: $prop $time
+
+/* css3-rotation */
+@mixin css3-rotation($deg)
+  -o-transform: rotate($deg)
+  -ms-transform: rotate($deg)
+  -moz-transform: rotate($deg)
+  -webkit-transform: rotate($deg)
+  transform: rotate($deg)
+
+/* text-selection */  
+@mixin css3-user-select
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none

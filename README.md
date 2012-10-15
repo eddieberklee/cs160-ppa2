@@ -3,6 +3,13 @@ CS160 Pair Programming #2
 
 UC Berkeley: Edward Lee & Peter Lee
 
+Links
+-----
+
+http://tonymilne.com.au/posts/multi-file-drag-and-drop-ajax-upload
+http://css.dzone.com/articles/html5-drag-and-drop-multiple
+http://tutorialzine.com/2011/09/html5-file-upload-jquery-php/
+
 Rules
 -----
 

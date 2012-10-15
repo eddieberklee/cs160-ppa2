@@ -1,0 +1,70 @@
+!!! 5
+%html
+  %head
+    %title variable_as_name
+    %link{:rel=>"stylesheet", :href=>"css/reset.css"}
+    %link{:rel=>"stylesheet", :href=>"bootstrap/css/bootstrap.min.css"}
+    %link{:rel=>"stylesheet", :href=>"css/style.css"}
+  %body
+    #container
+      #header
+        %h1
+          #text
+            %span#name
+            %span#s-portfolio
+              's Portfolio
+            .clear
+          .clear
+      .vspacer-50
+      #description
+        Description: The "white light" represents the source of all my works. Click the crystals to see work related to their respective topics.
+      .vspacer-60
+      #body_content
+        #red-ring
+          %img{:src=>"img/ring.png", :width=>"60"}
+        #yellow-ring
+          %img{:src=>"img/ring.png", :width=>"60"}
+        #blue-ring
+          %img{:src=>"img/ring.png", :width=>"60"}
+        #prism
+          #w-source
+          %img{:src=>"img/red_gem.png", :id=>"red", :class=>"on"}
+          #w-r.filter
+          %img{:src=>"img/yellow_gem.png", :id=>"yellow", :class=>"on"}
+          #w-r-y.filter
+          %img{:src=>"img/blue_gem.png", :id=>"blue", :class=>"on"}
+          #w-r-y-b.filter
+
+          #triangle
+            #triangle-actual
+          #triangle-r
+            #triangle-actual-r
+          %img{:src=>"img/prism.png", :id=>"prism-diffuser"}
+          #list-background
+            -# %p.blue-on
+            -#   %i{:class=>"icon-file"}
+            -#   %span
+            -#     Relationship Between Internet QoS and Multicast Methodologies
+            -# %p.red-on
+            -#   %i{:class=>"icon-file"}
+            -#   %span
+            -#     Methodology for the Development
+            -# %p
+            -#   %i{:class=>"icon-file"}
+            -#   %span
+            -#     Enabling the Internet and 8 Bit Architectures with Kisser
+            -# %p
+            -#   %i{:class=>"icon-file"}
+            -#   %span
+            -#     Harnessing Hierarchical Databases Using Authenticated Configurations
+            -# %p
+            -#   %i{:class=>"icon-file"}
+            -#   %span
+            -#     Deconstructing the Lookaside Buffer
+          .clear
+      .vspacer-60
+      %div#footer
+        Footer
+      %script{:src=>"js/jquery-1.8.2.min.js"}
+      %script{:src=>"bootstrap/js/bootstrap.min.js"}
+      %script{:src=>"js/code.js"}
