@@ -104,7 +104,7 @@ $(function() {
           $("#triangle-actual-r").addClass('yellow-on');
           removeClasses($("#triangle-actual"));
           $("#triangle-actual").addClass('yellow-on');
-          var tag = "yb";
+          var tag = "y";
           ajax_per_click(tag);
         }
       }
@@ -120,6 +120,8 @@ $(function() {
           $("#triangle-actual-r").addClass('blue-on');
           removeClasses($("#triangle-actual"));
           $("#triangle-actual").addClass('blue-on');
+          var tag = "b";
+          ajax_per_click(tag);
         }
         else if (!$blue.hasClass('on')) {
           removeClasses($blue_light);
@@ -130,6 +132,8 @@ $(function() {
           $("#triangle-actual-r").addClass('white-on');
           removeClasses($("#triangle-actual"));
           $("#triangle-actual").addClass('white-on');
+          var tag = "";
+          ajax_per_click(tag);
         }
       }
     }
@@ -188,7 +192,7 @@ $(function() {
         "data-tags='"+docs[i][TAGS]+"'>"
         +docs[i][FILENAME]+"</a>"
       );
-
+      color_check($("#list-background p:nth-of-type("+i+1+")"), docs[i][TAGS]);
     }
   }
 
@@ -251,8 +255,58 @@ $(function() {
   var $text_surrounding_name = $("#header div#text");
   // debug ? console.log(name.length) : 1;
   
+  // moveCrystal("#red");
+  // moveCrystal("#yellow");
+  // moveCrystal("#blue");
   color_bars();
-  moveCrystal("#red");
-  moveCrystal("#yellow");
-  moveCrystal("#blue");
+
+  var template = '<p><i class="icon-file"></i><span></span></p>';
+
+  var upload_url;
+
+  $.ajax({
+    url: "/upload_form_action",
+    type: "GET",
+    success: function(data) {
+      var obj = jQuery.parseJSON(data);
+      $("form").attr('action',obj[0]);
+    },
+  });
+
+  $("#list-background").filedrop({
+    url: '/upload',
+    paramname: 'file',
+    error: function(err, file) {
+      switch(err) {
+        case 'BrowserNotSupported':
+          alert('browser does not support html5 drag and drop')
+          break;
+        case 'TooManyFiles':
+          // user uploaded more than 'maxfiles'
+          break;
+        case 'FileTooLarge':
+          // program encountered a file whose size is greater than 'maxfilesize'
+          // FileTooLarge also has access to the file which was too large
+          // use file.name to reference the filename of the culprit file
+          break;
+        case 'FileTypeNotAllowed':
+          // The file type is not in the specified list 'allowedfiletypes'
+          default:
+          break;
+      }
+    },
+    dragOver: function() {
+      $("list-background").addClass('hover');
+    },
+    drop: function() {
+    },
+    uploadStarted: function(i,file,len) {
+    },
+    uploadFinished: function(i,file,response,time) {
+    },
+  });
+  console.log($("form").attr('action'));
+
 });
+
+

@@ -223,7 +223,8 @@ body {
 
 #red, #yellow, #blue {
   margin-top: 1px;
-  cursor: pointer; }
+  cursor: pointer;
+  top: 90px; }
 
 #w-source, #w-r, #w-r-y, #w-r-y-b {
   width: 140px;
@@ -281,60 +282,60 @@ body {
   box-shadow: 0px 0px 6px white; }
 
 .red-on {
-  background-color: #de2e2b;
-  -o-box-shadow: 0px 0px 6px #de2e2b;
-  -ms-box-shadow: 0px 0px 6px #de2e2b;
-  -moz-box-shadow: 0px 0px 6px #de2e2b;
-  -webkit-box-shadow: 0px 0px 6px #de2e2b;
-  box-shadow: 0px 0px 6px #de2e2b; }
+  background-color: #d23a37;
+  -o-box-shadow: 0px 0px 6px #d23a37;
+  -ms-box-shadow: 0px 0px 6px #d23a37;
+  -moz-box-shadow: 0px 0px 6px #d23a37;
+  -webkit-box-shadow: 0px 0px 6px #d23a37;
+  box-shadow: 0px 0px 6px #d23a37; }
 
 .yellow-on {
-  background-color: #efed66;
-  -o-box-shadow: 0px 0px 6px #efed66;
-  -ms-box-shadow: 0px 0px 6px #efed66;
-  -moz-box-shadow: 0px 0px 6px #efed66;
-  -webkit-box-shadow: 0px 0px 6px #efed66;
-  box-shadow: 0px 0px 6px #efed66; }
+  background-color: #e7e56e;
+  -o-box-shadow: 0px 0px 6px #e7e56e;
+  -ms-box-shadow: 0px 0px 6px #e7e56e;
+  -moz-box-shadow: 0px 0px 6px #e7e56e;
+  -webkit-box-shadow: 0px 0px 6px #e7e56e;
+  box-shadow: 0px 0px 6px #e7e56e; }
 
 .blue-on {
-  background-color: #83c9d5;
-  -o-box-shadow: 0px 0px 6px #83c9d5;
-  -ms-box-shadow: 0px 0px 6px #83c9d5;
-  -moz-box-shadow: 0px 0px 6px #83c9d5;
-  -webkit-box-shadow: 0px 0px 6px #83c9d5;
-  box-shadow: 0px 0px 6px #83c9d5; }
+  background-color: #8bc3cd;
+  -o-box-shadow: 0px 0px 6px #8bc3cd;
+  -ms-box-shadow: 0px 0px 6px #8bc3cd;
+  -moz-box-shadow: 0px 0px 6px #8bc3cd;
+  -webkit-box-shadow: 0px 0px 6px #8bc3cd;
+  box-shadow: 0px 0px 6px #8bc3cd; }
 
 .brown-on {
-  background-color: #491c00;
-  -o-box-shadow: 0px 0px 6px #491c00;
-  -ms-box-shadow: 0px 0px 6px #491c00;
-  -moz-box-shadow: 0px 0px 6px #491c00;
-  -webkit-box-shadow: 0px 0px 6px #491c00;
-  box-shadow: 0px 0px 6px #491c00; }
+  background-color: #451d04;
+  -o-box-shadow: 0px 0px 6px #451d04;
+  -ms-box-shadow: 0px 0px 6px #451d04;
+  -moz-box-shadow: 0px 0px 6px #451d04;
+  -webkit-box-shadow: 0px 0px 6px #451d04;
+  box-shadow: 0px 0px 6px #451d04; }
 
 .orange-on {
-  background-color: #ff580b;
-  -o-box-shadow: 0px 0px 6px #ff580b;
-  -ms-box-shadow: 0px 0px 6px #ff580b;
-  -moz-box-shadow: 0px 0px 6px #ff580b;
-  -webkit-box-shadow: 0px 0px 6px #ff580b;
-  box-shadow: 0px 0px 6px #ff580b; }
+  background-color: #f35d17;
+  -o-box-shadow: 0px 0px 6px #f35d17;
+  -ms-box-shadow: 0px 0px 6px #f35d17;
+  -moz-box-shadow: 0px 0px 6px #f35d17;
+  -webkit-box-shadow: 0px 0px 6px #f35d17;
+  box-shadow: 0px 0px 6px #f35d17; }
 
 .green-on {
-  background-color: #8a9d00;
-  -o-box-shadow: 0px 0px 6px #8a9d00;
-  -ms-box-shadow: 0px 0px 6px #8a9d00;
-  -moz-box-shadow: 0px 0px 6px #8a9d00;
-  -webkit-box-shadow: 0px 0px 6px #8a9d00;
-  box-shadow: 0px 0px 6px #8a9d00; }
+  background-color: #849508;
+  -o-box-shadow: 0px 0px 6px #849508;
+  -ms-box-shadow: 0px 0px 6px #849508;
+  -moz-box-shadow: 0px 0px 6px #849508;
+  -webkit-box-shadow: 0px 0px 6px #849508;
+  box-shadow: 0px 0px 6px #849508; }
 
 .purple-on {
-  background-color: #480048;
-  -o-box-shadow: 0px 0px 6px #480048;
-  -ms-box-shadow: 0px 0px 6px #480048;
-  -moz-box-shadow: 0px 0px 6px #480048;
-  -webkit-box-shadow: 0px 0px 6px #480048;
-  box-shadow: 0px 0px 6px #480048; }
+  background-color: #440444;
+  -o-box-shadow: 0px 0px 6px #440444;
+  -ms-box-shadow: 0px 0px 6px #440444;
+  -moz-box-shadow: 0px 0px 6px #440444;
+  -webkit-box-shadow: 0px 0px 6px #440444;
+  box-shadow: 0px 0px 6px #440444; }
 
 .white-on {
   background-color: white;
@@ -393,6 +394,13 @@ body {
   left: 123px;
   padding: 10px;
   padding-bottom: 0; }
+  #list-background:hover {
+    background-color: #cccccc;
+    -o-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+    -ms-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+    -moz-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+    -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4); }
 
 #list-background p {
   padding: 5px;
@@ -406,6 +414,12 @@ body {
     -webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.45);
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.45);
     opacity: 1; }
+
+#list-background a {
+  color: #111111; }
+
+h3#display-status {
+  text-align: right; }
 
 #prism-diffuser {
   left: -110px; }

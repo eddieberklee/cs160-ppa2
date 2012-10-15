@@ -26,6 +26,9 @@
       </div>
       <div class='vspacer-60'></div>
       <div id='body_content'>
+        <h3 class='message' id='display-status'>
+          Displaying all documents...
+        </h3>
         <div id='red-ring'>
           <img src='img/ring.png' width='60' />
         </div>
@@ -37,11 +40,11 @@
         </div>
         <div id='prism'>
           <div id='w-source'></div>
-          <img class='on' id='red' src='img/red_gem.png' />
+          <img id='red' src='img/red_gem.png' />
           <div class='filter' id='w-r'></div>
-          <img class='on' id='yellow' src='img/yellow_gem.png' />
+          <img id='yellow' src='img/yellow_gem.png' />
           <div class='filter' id='w-r-y'></div>
-          <img class='on' id='blue' src='img/blue_gem.png' />
+          <img id='blue' src='img/blue_gem.png' />
           <div class='filter' id='w-r-y-b'></div>
           <div id='triangle'>
             <div id='triangle-actual'></div>
@@ -50,9 +53,12 @@
             <div id='triangle-actual-r'></div>
           </div>
           <img id='prism-diffuser' src='img/prism.png' />
-          <div id='list-background'>
-            <h3>Displaying all documents...</h3>
-          </div>
+          <div id='list-background'></div>
+          <form action='' enctype='multipart/form-data' method='POST'>
+            <input name='file' type='file' />
+            <input name='tags' type='text' />
+            <input name='submit' type='submit' value='Upload!' />
+          </form>
           <div class='clear'></div>
         </div>
       </div>
@@ -62,6 +68,10 @@
       </div>
       <script src='js/jquery-1.8.2.min.js'></script>
       <script src='bootstrap/js/bootstrap.min.js'></script>
+      <script src='js/jquery.filedrop.js'></script>
+      <script src='js/plupload/gears_init.js'></script>
+      <script src='js/plupload/plupload.full.min.js'></script>
+      <script src='js/jquery.form.js'></script>
       <script src='js/code.js'></script>
     </div>
   </body>

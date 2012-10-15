@@ -20,6 +20,10 @@
         Description: The "white light" represents the source of all my works. Click the crystals to see work related to their respective topics.
       .vspacer-60
       #body_content
+
+        %h3#display-status.message
+          Displaying all documents...
+
         #red-ring
           %img{:src=>"img/ring.png", :width=>"60"}
         #yellow-ring
@@ -28,11 +32,12 @@
           %img{:src=>"img/ring.png", :width=>"60"}
         #prism
           #w-source
-          %img{:src=>"img/red_gem.png", :id=>"red", :class=>"on"}
+          -# %img{:src=>"img/red_gem.png", :id=>"red", :class=>"on"}
+          %img{:src=>"img/red_gem.png", :id=>"red"}
           #w-r.filter
-          %img{:src=>"img/yellow_gem.png", :id=>"yellow", :class=>"on"}
+          %img{:src=>"img/yellow_gem.png", :id=>"yellow"}
           #w-r-y.filter
-          %img{:src=>"img/blue_gem.png", :id=>"blue", :class=>"on"}
+          %img{:src=>"img/blue_gem.png", :id=>"blue"}
           #w-r-y-b.filter
 
           #triangle
@@ -41,7 +46,12 @@
             #triangle-actual-r
           %img{:src=>"img/prism.png", :id=>"prism-diffuser"}
           #list-background
-            %h3 Displaying all documents...
+
+          %form{:action=>"", :method=>"POST", :enctype=>"multipart/form-data"}
+            %input{:type=>"file", :name=>"file"}
+            %input{:type=>"text", :name=>"tags"}
+            %input{:type=>"submit", :name=>"submit", :value=>"Upload!"}
+
             -# %p.blue-on
             -#   %i{:class=>"icon-file"}
             -#   %span
@@ -68,4 +78,8 @@
         Footer
       %script{:src=>"js/jquery-1.8.2.min.js"}
       %script{:src=>"bootstrap/js/bootstrap.min.js"}
+      %script{:src=>"js/jquery.filedrop.js"}
+      %script{:src=>"js/plupload/gears_init.js"}
+      %script{:src=>"js/plupload/plupload.full.min.js"}
+      %script{:src=>"js/jquery.form.js"}
       %script{:src=>"js/code.js"}
