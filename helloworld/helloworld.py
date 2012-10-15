@@ -149,7 +149,6 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
               'Access-Control-Allow-Methods'
           ] = 'OPTIONS, HEAD, GET, POST, PUT, DELETE'
   def post(self):
-    print upload_files
     upload_files = self.get_uploads('file')  # 'file' is file upload field in the form
     blob_info = upload_files[0]
 
@@ -163,7 +162,7 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
     greeting.filename = blob_info.filename
     if greeting.file:
       greeting.put()
-      self.redirect('/?' + urllib.urlencode({'guestbook_name': guestbook_name}))
+      self.redirect('/')#?' + urllib.urlencode({'guestbook_name': guestbook_name}))
 
 
 class ServeHandler(blobstore_handlers.BlobstoreDownloadHandler):

@@ -24,6 +24,11 @@
       <div id='description'>
         Description: The "white light" represents the source of all my works. Click the crystals to see work related to their respective topics.
       </div>
+          <form action='{{upload_url}}' enctype='multipart/form-data' method='POST'>
+            <input name='file' type='file' />
+            <input name='tags' type='text' />
+            <input name='submit' type='submit' value='Upload!' />
+          </form>
       <div class='vspacer-60'></div>
       <div id='body_content'>
         <h3 class='message' id='display-status'>
@@ -54,11 +59,6 @@
           </div>
           <img id='prism-diffuser' src='img/prism.png' />
           <div id='list-background'></div>
-          <form action='' enctype='multipart/form-data' method='POST'>
-            <input name='file' type='file' />
-            <input name='tags' type='text' />
-            <input name='submit' type='submit' value='Upload!' />
-          </form>
           <div class='clear'></div>
         </div>
       </div>
