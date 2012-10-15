@@ -157,7 +157,7 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
     greeting.filename = blob_info.filename
     if greeting.file:
       greeting.put()
-      self.redirect('/?' + urllib.urlencode({'guestbook_name': guestbook_name}))
+      self.redirect('/')#?' + urllib.urlencode({'guestbook_name': guestbook_name}))
 
 
 class ServeHandler(blobstore_handlers.BlobstoreDownloadHandler):

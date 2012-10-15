@@ -345,6 +345,36 @@ body {
   -webkit-box-shadow: 0px 0px 6px white;
   box-shadow: 0px 0px 6px white; }
 
+#display-status {
+  color: #666666; }
+
+.color-title {
+  width: 120px;
+  height: 155px;
+  opacity: 0.6;
+  background-color: #e0e0e0;
+  position: absolute;
+  top: 135px;
+  left: 70px;
+  -o-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  -webkit-box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.2); }
+
+.color-title div {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 4px; }
+
+#yellow-title {
+  left: 210px; }
+
+#blue-title {
+  left: 350px; }
+
 #triangle, #triangle-r, #triangle-actual, #triangle-actual-r, #triangle-r, #triangle-actual-r {
   -o-transition: all 0.2s;
   -ms-transition: all 0.2s;

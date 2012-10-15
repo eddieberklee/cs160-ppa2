@@ -34,6 +34,7 @@ $(function() {
           $("#triangle-actual").addClass('brown-on');
           var tag = "ryb";
           ajax_per_click(tag);
+          $("#display-status").text('"Displaying only Java + Python + Design documents!"');
         }
         else if (!$blue.hasClass('on')) {
           removeClasses($blue_light);
@@ -46,6 +47,7 @@ $(function() {
           $("#triangle-actual").addClass('orange-on');
           var tag = "ry";
           ajax_per_click(tag);
+          $("#display-status").text('"Displaying only Java + Python documents!"');
         }
       }
       else if (!$yellow.hasClass('on')) {
@@ -62,6 +64,7 @@ $(function() {
           $("#triangle-actual").addClass('purple-on');
           var tag = "rb";
           ajax_per_click(tag);
+          $("#display-status").text('"Displaying only Java + Design documents!"');
         }
         else if (!$blue.hasClass('on')) {
           removeClasses($blue_light);
@@ -74,6 +77,7 @@ $(function() {
           $("#triangle-actual").addClass('red-on');
           var tag = "rb";
           ajax_per_click(tag);
+          $("#display-status").text('"Displaying only Java documents!"');
         }
       }
     }
@@ -94,6 +98,7 @@ $(function() {
           $("#triangle-actual").addClass('green-on');
           var tag = "yb";
           ajax_per_click(tag);
+          $("#display-status").text('"Displaying only Python + Design documents!"');
         }
         else if (!$blue.hasClass('on')) {
           removeClasses($blue_light);
@@ -106,6 +111,7 @@ $(function() {
           $("#triangle-actual").addClass('yellow-on');
           var tag = "y";
           ajax_per_click(tag);
+          $("#display-status").text('"Displaying only Python documents!"');
         }
       }
       else if (!$yellow.hasClass('on')) {
@@ -122,6 +128,7 @@ $(function() {
           $("#triangle-actual").addClass('blue-on');
           var tag = "b";
           ajax_per_click(tag);
+          $("#display-status").text('"Displaying only Design documents!"');
         }
         else if (!$blue.hasClass('on')) {
           removeClasses($blue_light);
@@ -134,6 +141,7 @@ $(function() {
           $("#triangle-actual").addClass('white-on');
           var tag = "";
           ajax_per_click(tag);
+          $("#display-status").text('"Displaying all documents!"');
         }
       }
     }
@@ -183,16 +191,16 @@ $(function() {
     var total_number = docs.length;
     var list_p = "";
     for (var i=0; i<total_number; i++) {
-      list_p += "<p><i class=\"icon-file\"></i><span></span></p>";
+      list_p += "<p><i class=\"icon-file\"></i><span></span><span style='float:right;'>tags:1,2,3</span></p>";
     }
+    $("#list-background").html('');
     $("#list-background").html(list_p);
     for (var i=0; i<total_number; i++) {
-      $("#list-background p:nth-of-type("+i+1+") span").html(
+      $("#list-background p:nth-of-type("+(parseInt(i)+1)+") span:first-of-type").html(
         "<a href=\""+docs[i][URL]+"\" data-author='"+docs[i][AUTHOR]+"'"+
-        "data-tags='"+docs[i][TAGS]+"'>"
-        +docs[i][FILENAME]+"</a>"
-      );
-      color_check($("#list-background p:nth-of-type("+i+1+")"), docs[i][TAGS]);
+        ">"+docs[i][FILENAME]+"</a>");
+      $("#list-background p:nth-of-type("+(parseInt(i)+1)+") span:nth-of-type(2)").text(docs[i][TAGS]);
+      color_check($("#list-background p:nth-of-type("+(parseInt(i)+1)+")"), docs[i][TAGS]);
     }
   }
 
