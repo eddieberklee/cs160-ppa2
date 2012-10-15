@@ -394,13 +394,6 @@ body {
   left: 123px;
   padding: 10px;
   padding-bottom: 0; }
-  #list-background:hover {
-    background-color: #cccccc;
-    -o-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
-    -ms-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
-    -moz-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
-    -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4); }
 
 #list-background p {
   padding: 5px;

@@ -142,15 +142,9 @@ class Greeting(db.Model):
   file = blobstore.BlobReferenceProperty(required=False)
 
 class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
-  def initialize(self, request, response):
-          super(UploadHandler, self).initialize(request, response)
-          self.response.headers['Access-Control-Allow-Origin'] = '*'
-          self.response.headers[
-              'Access-Control-Allow-Methods'
-          ] = 'OPTIONS, HEAD, GET, POST, PUT, DELETE'
   def post(self):
-    print upload_files
     upload_files = self.get_uploads('file')  # 'file' is file upload field in the form
+    print upload_files
     blob_info = upload_files[0]
 
     guestbook_name = self.request.get('guestbook_name')

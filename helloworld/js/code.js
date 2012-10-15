@@ -196,6 +196,10 @@ $(function() {
     }
   }
 
+  function generate_tags() {
+
+  }
+
   function ripple(color) {
     selector = '#' + color + '-ring img';
     $(selector).css('opacity','100');
@@ -221,6 +225,7 @@ $(function() {
       type: "GET",
       context: document.body
     }).done(function(dataReturned) { 
+      console.log(dataReturned);
       var obj = jQuery.parseJSON(dataReturned);
       var count = 0;
       var docs = [];
@@ -299,6 +304,8 @@ $(function() {
       $("list-background").addClass('hover');
     },
     drop: function() {
+      tags = generate_tags();
+      $("form input[type='text']").val(tags);
     },
     uploadStarted: function(i,file,len) {
     },
