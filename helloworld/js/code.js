@@ -7,6 +7,23 @@ $(function() {
     }
   }
 
+  $("#prism-object").hover(function() {
+    $("#tooltip-prism").css('visibility','visible');
+  },
+  function() {
+    $("#tooltip-prism").css('visibility','hidden');
+  });
+
+  $("#red").tooltip({
+    'title':'Click to filter all documents and show Java-only documents',
+  });
+  $("#yellow").tooltip({
+    'title':'Click to filter all documents and show Python-only documents',
+  });
+  $("#blue").tooltip({
+    'title':'Click to filter all documents and show Design-only documents',
+  });
+
   var debug = 1;
   var name = "Eddie";
 

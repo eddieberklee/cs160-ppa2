@@ -50,12 +50,23 @@
             #triangle-actual
           #triangle-r
             #triangle-actual-r
-          %img{:src=>"img/prism.png", :id=>"prism-diffuser"}
+          #prism-object
+            %img{:src=>"img/prism.png", :id=>"prism-diffuser"}
+            #tooltip-prism
+              %p ORDER BY:
+              %p
+                %a Name
+              %p
+                %a Date
+              %p
+                %a Author
           #list-background
 
-          %form{:action=>"", :method=>"POST", :enctype=>"multipart/form-data", :style=>"position:relative;top:200px;"}
+          %form{:action=>"", :method=>"POST", :enctype=>"multipart/form-data"}
             %input{:type=>"file", :name=>"file"}
-            %input{:type=>"text", :name=>"tags"}
+            %br
+            %input{:type=>"text", :name=>"tags", :value=>"Tag either: r/y/b/ry/yb/ryb"}
+            %br
             %input{:type=>"submit", :name=>"submit", :value=>"Upload!"}
 
             -# %p.blue-on
@@ -81,7 +92,26 @@
           .clear
       .vspacer-60
       %div#footer
-        Footer
+        %p{:style=>"font-size:1.3em;"}
+          TO SEE INTERACTION WITH DOCUMENTS/UPLOAD GO TO:
+          %a{:href=>"http://prizmportfolio.appspot.com"} http://prizmportfolio.appspot.com
+        %br
+        %br
+        Design & Front-End by Edward Lee
+        %br
+        Back-End by Peter Lee
+        %br
+        %br
+        %br
+        %a{:href=>"http://www.haml-lang.com/"} HAML
+        &nbsp;+&nbsp;
+        %a{:href=>"http://www.sass-lang.com/"} SASS
+        &nbsp;+&nbsp;
+        %a{:href=>"http://jquery.com/"} jQuery
+        &nbsp;+&nbsp;
+        %a{:href=>"http://twitter.github.com/bootstrap/"} Bootstrap
+        %p{:style=>"margin-top:20px;font-size:1.2em;width:300px;text-align:right;"} = Front-End BLISS
+        %br
       %script{:src=>"js/jquery-1.8.2.min.js"}
       %script{:src=>"bootstrap/js/bootstrap.min.js"}
       %script{:src=>"js/jquery.filedrop.js"}

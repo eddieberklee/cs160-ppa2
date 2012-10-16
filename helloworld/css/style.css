@@ -375,6 +375,44 @@ body {
 #blue-title {
   left: 350px; }
 
+form {
+  background-color: #aaaaaa;
+  width: 230px;
+  height: 100px;
+  margin-top: -200px;
+  position: relative;
+  top: 500px;
+  z-index: 50; }
+
+#tooltip-prism {
+  position: absolute;
+  z-index: 15;
+  top: 130px;
+  left: 450px;
+  width: 194px;
+  height: 161px;
+  color: white;
+  background-image: url("../img/tooltip.png");
+  background-repeat: no-repeat;
+  visibility: hidden;
+  padding-top: 30px;
+  padding-left: 20px;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+  #tooltip-prism p {
+    padding: 0;
+    margin: 0;
+    margin: 5px 0;
+    position: relative;
+    left: 18px; }
+    #tooltip-prism p:first-of-type {
+      left: 0; }
+    #tooltip-prism p a {
+      cursor: pointer; }
+
 #triangle, #triangle-r, #triangle-actual, #triangle-actual-r, #triangle-r, #triangle-actual-r {
   -o-transition: all 0.2s;
   -ms-transition: all 0.2s;

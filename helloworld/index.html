@@ -61,11 +61,27 @@
           <div id='triangle-r'>
             <div id='triangle-actual-r'></div>
           </div>
-          <img id='prism-diffuser' src='img/prism.png' />
+          <div id='prism-object'>
+            <img id='prism-diffuser' src='img/prism.png' />
+            <div id='tooltip-prism'>
+              <p>ORDER BY:</p>
+              <p>
+                <a>Name</a>
+              </p>
+              <p>
+                <a>Date</a>
+              </p>
+              <p>
+                <a>Author</a>
+              </p>
+            </div>
+          </div>
           <div id='list-background'></div>
-          <form action='' enctype='multipart/form-data' method='POST' style='position:relative;top:200px;'>
+          <form action='' enctype='multipart/form-data' method='POST'>
             <input name='file' type='file' />
-            <input name='tags' type='text' />
+            <br />
+            <input name='tags' type='text' value='Tag either: r/y/b/ry/yb/ryb' />
+            <br />
             <input name='submit' type='submit' value='Upload!' />
           </form>
           <div class='clear'></div>
@@ -73,7 +89,27 @@
       </div>
       <div class='vspacer-60'></div>
       <div id='footer'>
-        Footer
+        <p style='font-size:1.3em;'>
+          TO SEE INTERACTION WITH DOCUMENTS/UPLOAD GO TO:
+          <a href='http://prizmportfolio.appspot.com'>http://prizmportfolio.appspot.com</a>
+        </p>
+        <br />
+        <br />
+        Design & Front-End by Edward Lee
+        <br />
+        Back-End by Peter Lee
+        <br />
+        <br />
+        <br />
+        <a href='http://www.haml-lang.com/'>HAML</a>
+        &nbsp;+&nbsp;
+        <a href='http://www.sass-lang.com/'>SASS</a>
+        &nbsp;+&nbsp;
+        <a href='http://jquery.com/'>jQuery</a>
+        &nbsp;+&nbsp;
+        <a href='http://twitter.github.com/bootstrap/'>Bootstrap</a>
+        <p style='margin-top:20px;font-size:1.2em;width:300px;text-align:right;'>= Front-End BLISS</p>
+        <br />
       </div>
       <script src='js/jquery-1.8.2.min.js'></script>
       <script src='bootstrap/js/bootstrap.min.js'></script>

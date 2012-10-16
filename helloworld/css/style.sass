@@ -197,6 +197,7 @@ $light-opacity: 0.8
 
 #display-status
   color: #666
+  @include css3-transition(all,0.3s)
 
 .color-title
   width: 120px
@@ -218,6 +219,41 @@ $light-opacity: 0.8
   left: 210px
 #blue-title
   left: 350px
+
+form
+  background-color: #aaa
+  width: 230px
+  height: 100px
+  margin-top: -200px
+  position: relative
+  top: 500px
+  z-index: 50
+
+#tooltip-prism
+  position: absolute
+  z-index: 15
+  top: 130px
+  left: 450px
+  width: 194px
+  height: 161px
+  color: #fff
+  background-image: url("../img/tooltip.png")
+  background-repeat: no-repeat
+  visibility: hidden
+  padding-top: 30px
+  padding-left: 20px
+  p
+    padding: 0
+    margin: 0
+    margin: 5px 0
+    position: relative
+    left: 18px
+    &:first-of-type
+      left: 0
+    a
+      cursor: pointer
+
+  @include css3-transition(all,0.2s)
 
 $triangle-width: 40px
 $triangle-actual-margin-top: 9px
