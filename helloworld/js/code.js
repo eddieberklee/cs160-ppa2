@@ -201,6 +201,9 @@ $(function() {
       case 'yb':
         selector.addClass('green-on');
         break;
+      case 'ryb':
+        selector.addClass('brown-on');
+        break;
     }
   }
 
